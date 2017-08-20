@@ -63,7 +63,7 @@ public class MyTest {
 			kafkaProperties.setProperty("group.initial.rebalance.delay.ms", "0");
 			
 			//start kafka
-			kafka = new KafkaLocal(kafkaProperties, zkProperties);
+			kafka = new KafkaLocal(kafkaProperties);
 			
 			Thread.sleep(10000);
 			

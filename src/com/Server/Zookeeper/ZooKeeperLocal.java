@@ -6,7 +6,7 @@ import java.util.Properties;
 
 import org.apache.zookeeper.server.ServerConfig;
 import org.apache.zookeeper.server.ZooKeeperServerMain;
-import org.apache.zookeeper.server.admin.AdminServer.AdminServerException;
+
 import org.apache.zookeeper.server.quorum.QuorumPeerConfig;
 
 public class ZooKeeperLocal {

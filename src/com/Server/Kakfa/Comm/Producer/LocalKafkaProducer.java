@@ -27,12 +27,17 @@ public LocalKafkaProducer(com.poroto.PersonList.PersonProto.Person personBuilder
 		props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
 		      
 		      Producer<String, String> producer = new KafkaProducer<String, String>(props);
+
+		      System.out.println("LocalKafkaProducer : "+producer);
+
+		    // ProducerRecord producerRecord = new ProducerRecord<String, String>(producer<String,>);
+
 		
 		    //  System.out.println(personBuilder.toString());
 		      
 		      producer.send(new ProducerRecord<String, String>("test", personBuilder.toString()));
 		      
-		   //   System.out.println("MESSEGE SUCCESSFULLY SENT");
+		      System.out.println("MESSEGE SUCCESSFULLY SENT");
 		      
 	
 	     // for(int i = 0; i < 1000; i++)
