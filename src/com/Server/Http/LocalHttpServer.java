@@ -118,9 +118,9 @@ public class LocalHttpServer {
 	                                        
 	                                        /*--ENDS--*/
 	                                        
-	                                       // final String responseMessage = "<html><body><h1>Hello from Netty!</h1></body></html>";                                            
-	                                        
-	                                        final String responseMessage = fileReader();
+	                                        final String responseMessage = "<html><head></head><body><form><p><label for=\"first_name\">First Name:</label><input type=\"text\" name=\"first_name\" id=\"fname\"></p><p><label for=\"last_name\">Last Name:</label><input type=\"text\" name=\"last_name\" id=\"lname\"></p><input value=\"Click Me\" type=\"Button\" onclick=\"submitform2POST()\"></form><script>function submitform(){var myObj;myObj = {\"first_name\":document.getElementById(\"fname\").value,\"last_name\":document.getElementById(\"lname\").value};}function submitform2POST(){var xhr = new XMLHttpRequest();var url = \"http://localhost:8008\";xhr.open(\"POST\", url, true);xhr.setRequestHeader(\"Content-type\", \"application/json\");xhr.onreadystatechange = function () {if (xhr.readyState === 4 && xhr.status === 200){var json = JSON.parse(xhr.responseText);}};var data =JSON.stringify({\"first_name\":document.getElementById(\"fname\").value, \"last_name\":document.getElementById(\"lname\").value });xhr.send(data);}</script></body></html>";
+
+	                                      //  final String responseMessage = fileReader();
 	                                        
 	                                        
 	                                        FullHttpResponse response = new DefaultFullHttpResponse(
